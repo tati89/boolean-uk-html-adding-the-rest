@@ -1,0 +1,113 @@
+* {
+  margin: 0;
+  text-align: center;
+}
+
+.container {
+  display: grid;
+  grid-template:
+    "menu header header" 50px
+    "menu side-channels main " /
+    0.1fr 0.15fr 0.9fr;
+  grid-gap: 2px;
+
+  height: 100vh;
+}
+
+.header {
+  grid-area: header;
+  background-color: lightyellow;
+
+  display: grid;
+  grid-template-columns: 0.15fr 0.9fr;
+  place-content: center;
+}
+
+.side-channels {
+  grid-area: side-channels;
+  background-color: lightpink;
+}
+
+.main {
+  grid-area: main;
+  background-color: lightgreen;
+}
+
+.menu {
+  grid-area: menu;
+  background-color: lightcoral;
+
+  padding: 5px;
+
+  display: grid;
+  grid-auto-rows: 50px;
+  grid-gap: 5px;
+}
+
+.header-wrapper {
+  display: grid;
+  grid-template-columns: 4rem 20rem;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.top-icons {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-gap: 5px;
+}
+
+.top-items {
+  display: grid;
+}
+
+.menu-item {
+  display: grid;
+  place-items: center;
+}
+.side-channels {
+  grid-area: side-channels;
+  background-color: #c931c950;
+  /* display: grid;
+  grid-template-rows: 4rem 20rem 4rem; */
+}
+
+.channels {
+  height: 100%;
+  display: grid;
+  grid-template-rows: 0.5fr 1fr auto;
+}
+
+.channels > * {
+  /* border: 2px solid #000; */
+}
+
+.channel-items {
+  /* border: 1px solid black; */
+}
+
+/* Ipad */
+/* @media screen and (max-width: 768px) {
+  .container {
+    grid-template:
+      "menu header" 80px
+      "menu general" 70px
+      "menu main" 1fr /
+      0.2fr 1fr;
+
+    grid-gap: 2px;
+  }
+} */
+
+/* Iphone 6,7,8 */
+/* @media screen and (max-width: 375px) {
+  .container {
+    grid-template:
+      "menu header" 50px
+      "menu main" 1fr
+      "general general" 50px /
+      0.2fr 1fr;
+
+    grid-gap: 1px;
+  }
+} */
